@@ -1,0 +1,30 @@
+Log blade php [x]
+Log Controller index [x]
+--------------------
+Add result per page option to list pages [x]
+Add result per page option to library page [x]
+--------------------
+Make search book for head layout [x]
+--------------------
+Make search for lists [x]
+    - book list [x]
+    - library list [x]
+    - user list [x]
+    - queue list [x]
+    - reservation list [x]
+    - logs list [x]
+    - field list [x]
+--------------------
+Add panel admin templete [x]
+Add persian data picker []
+--------------------
+Add ability to handle multiple quantities of a book reservation [x]
+--------------------
+Notification for users []
+--------------------
+User dashboard -> []
+    - reserve list []
+    - queue list []
+    - edit password []
+    - 
+--------------------

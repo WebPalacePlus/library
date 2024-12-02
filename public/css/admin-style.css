@@ -1,0 +1,228 @@
+:root {
+    --dark-red: #6082B6;
+    --hover-dark-red: #6082B6;
+    --jigari: #451a1a;
+}
+@font-face {
+    font-family: "Vazir";
+    src: url("/public/fonts/Vazir-Black-FD.eot");
+    font-weight: 800;
+}
+@font-face {
+    font-family: "Vazir";
+    src: url("/public/fonts/Vazir-Bold-FD.ttf");
+    font-weight: 700;
+}
+@font-face {
+    font-family: "Vazir";
+    src: url("/public/fonts/Vazir-Light-FD.ttf");
+    font-weight: 600;
+}
+@font-face {
+    font-family: "Vazir";
+    src: url("/public/fonts/Vazir-Medium-FD.ttf");
+    font-weight: 500;
+}
+@font-face {
+    font-family: "Vazir";
+    src: url("/public/fonts/Vazir-Regular-FD.ttf");
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Vazir";
+    src: url("/public/fonts/Vazir-Thin-FD.ttf");
+    font-weight: 300;
+}
+body,
+html {
+    margin: 0;
+    font-family: "Vazir";
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    background-color: var(--dark-red);
+    padding: 1em;
+    height: 3em;
+    color: white;
+}
+
+#toggle-menu {
+    background-color: transparent;
+    border-color: transparent;
+    display: none;
+}
+
+.collapse_menu .collapse_menu--icon,
+.vertical_nav {
+    -moz-transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+    color: white;
+}
+* {
+    box-sizing: border-box;
+}
+:active,
+:focus {
+    outline: 0;
+}
+
+.vertical_nav {
+    position: fixed;
+    top: 3em;
+    bottom: 0;
+    width: 15%;
+    background: var(--hover-dark-red);
+}
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.vertical_nav.closed {
+    right: calc(-12%);
+}
+.vertical_nav.opened {
+    right: 0px !important;
+}
+.menu{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.menu-item{
+    margin-bottom: 1em;
+}
+.menu-link{
+    text-decoration: none;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+#collapse_menu{
+    position: absolute;
+    bottom: 0;
+    width: 100% ;
+    font-size: large;
+    background-color: var(--dark-red);
+    color: white;
+    border: 0;
+    cursor: pointer;
+    text-align: left;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 2.5em;
+}
+
+.box{
+    padding: .5em 1em;
+    border-radius: 8px;
+    width: 80%;
+    margin: 1em auto;
+    overflow-x: auto;
+    box-shadow: 10px 10px 10px black;
+    background-color: var(--hover-dark-red);
+}
+
+.search-bar {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.full-search-bar{
+    width: 100%;
+    color: white;
+}
+
+.full-search-bar input[type="search"]{
+    width: 100%;
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+}
+
+.search-btn {
+    padding: 0.5em;
+    background-color: var(--dark-red);
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 0;
+}
+
+.btn {
+    text-decoration: none;
+    text-align: center;
+    background-color: var(--dark-red);
+    color: white;
+    border: none;
+    width: 100%;
+    font-size: 15px;
+    border-radius: 4px;
+    margin: 0.5em 0;
+    cursor: pointer;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.filter-box {
+    display: flex;
+    flex-direction: row;
+    border: 2px solid black;
+    border-radius: 8px;
+    font-size: 12px;
+    padding: 1em;
+    background-color: var(--dark-red);
+}
+
+.filter-select{
+    width: max-content;
+}
+
+@media (max-width:768px) {
+    header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .vertical_nav{
+        width: 50%;
+    }   
+    .vertical_nav.opened{
+        right: 0;
+    }
+    .vertical_nav.closed{
+        right: -50%;
+    }
+    #toggle-menu{
+        display: block;
+        color: white;
+        font-size: x-large;
+    }
+    .box{
+        width: 100%;
+        overflow-x: auto;
+    }
+}

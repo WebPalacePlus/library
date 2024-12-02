@@ -1,0 +1,8 @@
+.books-slider{
+    width: 100%;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
